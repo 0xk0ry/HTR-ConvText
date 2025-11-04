@@ -72,6 +72,12 @@ class myLoadDS(Dataset):
                             ' ()+,-./0123456789:<>ABCDEFGHIJKLMNOPQRSTUVWYZ[]abcdefghijklmnopqrstuvwxyz¾Ößäöüÿāēōūȳ̄̈—'
                         )
                     }
+                case 'vnondb':
+                    self.ralph = {
+                        idx: char for idx, char in enumerate(
+                            ' !"%&()*,-./0123456789:;?ABCDEFGHIJKLMNOPQRSTUVWXYabcdefghijklmnopqrstuvxyzÀÁÂÔÚÝàáâãèéêìíòóôõùúýĂăĐđĩũƠơƯưạẢảẤấẦầẩẫậắằẳẵặẹẻẽếỀềỂểễỆệỉịọỏỐốỒồổỗộớờỞởỡợụỦủứừửữựỳỷỹ'
+                        )
+                    }
                 case _:
                     alph = get_alphabet(self.tlbls)
                     self.ralph = dict(zip(alph.values(), alph.keys()))
