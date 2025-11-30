@@ -178,7 +178,6 @@ class MobileViTBlock(BaseModule):
         self.pos_pe = PosCNN(in_chans=transformer_dim, embed_dim=transformer_dim)
         assert transformer_dim % head_dim == 0
         num_heads = transformer_dim // head_dim
- 
         global_rep = [
             Block(
                 dim=transformer_dim,
